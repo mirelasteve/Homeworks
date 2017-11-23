@@ -1,0 +1,13 @@
+function solve (args) {
+  
+  
+let c=parseInt(args[0]).toString(2);
+    
+    c=c%1000;
+    c=c/100;
+     c=parseInt(c);
+  
+  console.log(c);
+
+
+}

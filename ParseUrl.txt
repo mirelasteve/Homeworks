@@ -1,0 +1,23 @@
+function parseurl(args) {
+    let example = args.join('');
+    let prot = example.match(/.+(?=\:)/g);
+    let protLen = prot.join('').length + 3;
+    let server = example.substr(protLen)
+
+    serverRes = '';
+    for (let i = 0; i < server.length; i++) {
+        if (server.charCodeAt(i) !== 47) {
+            serverRes += server[i];
+        } else {
+            break;
+        }
+
+    }
+    serverResLen = serverRes.length;
+    let resLen = protLen + serverResLen;
+
+    let resource = example.substr(resLen);
+    console.log('protocol: ' + prot + '\n' + 'server: ' + serverRes + '\n' + 'resource: ' + resource);
+
+
+}

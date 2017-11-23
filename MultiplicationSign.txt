@@ -1,0 +1,18 @@
+function solve(args){
+
+  let a = parseFloat(args[0]);
+  let b = parseFloat(args[1]);
+  let c = parseFloat(args[2]);
+  let p = a*b*c;
+  if (p == 0) {
+     console.log(0); 
+  }
+  if (p > 0) {
+  console.log("+");
+  }
+   if (p < 0) {
+  console.log("-");
+  }
+
+
+}

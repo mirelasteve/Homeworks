@@ -1,0 +1,30 @@
+function solve(args){
+
+   let x = parseFloat(args[0]);
+   let y = parseFloat(args[1]); 
+   let x1 = x-1;
+   let y1 = y-1;
+   let d = Math.sqrt(Math.pow(x1,2) + Math.pow(y1,2) );
+   let r = 1.5*1.5;
+   let d2 = (d*d);
+       d =d.toFixed(2);
+  let X1 = 1;
+  let X2 = 7;
+  let Y1 = -1;
+  let Y2 = -4;
+  let circle="";
+  let rectangle= "";
+  if (d2<=r) {
+    circle="inside circle";
+  }
+  else { 
+    circle="outside circle";
+  }
+  if ( X1<= x && x<=X2 && Y1<=y &&y<=Y2) {
+  rectangle="inside rectangle";
+  } 
+  else {
+   rectangle="outside rectangle"; 
+  }
+  console.log(circle+" "+rectangle);
+}

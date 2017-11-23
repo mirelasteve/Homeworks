@@ -1,0 +1,26 @@
+function remove(args) {
+    let newArr = [],
+        i, a = 0,
+        d;
+
+    function makePerson(fname, lname, age) {
+        return {
+            fname: fname,
+            lname: lname,
+            age: age,
+        }
+    }
+    for (i = 0; i < args.length; i += 3) {
+        newArr.push(makePerson(args[i], args[i + 1], args[i + 2]));
+    }
+
+    let min = newArr['0'].age;
+    for (let j = 0; j < newArr.length; j++) {
+        a = newArr[j].age;
+        if (a < min) {
+            min = a;
+            d = j;
+        }
+    }
+    console.log(newArr[d].fname + ' ' + newArr[d].lname);
+}

@@ -1,0 +1,4 @@
+function reverseString2(a) {
+    a = a.join(' ').split('').reverse().join('');
+    console.log(a);
+}

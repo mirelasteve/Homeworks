@@ -1,0 +1,36 @@
+function solve(args) {
+    let n = args.length;
+    let i;
+    let min = parseFloat(args[0]);
+    let max = parseFloat(args[0]);
+    let sum = 0;
+    let avg;
+    for (i = 0; i < n; i++) {
+        if (args[i] <= min) {
+            min = parseFloat(args[i]);
+
+        }
+    }
+
+    for (i = 0; i < n; i++) {
+        if (args[i] >= max) {
+            max = parseFloat(args[i]);
+
+        }
+    }
+    for (i = 0; i < n; i++) {
+        sum += parseFloat(args[i]);
+    }
+
+    avg = parseFloat(sum / n);
+
+    min = (parseFloat(min)).toFixed(2);
+    max = (parseFloat(max)).toFixed(2);
+    sum = sum.toFixed(2);
+    avg = avg.toFixed(2);
+
+    console.log('min=' + min);
+    console.log('max=' + max);
+    console.log('sum=' + sum);
+    console.log('avg=' + avg);
+}

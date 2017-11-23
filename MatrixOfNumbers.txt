@@ -1,0 +1,14 @@
+function solve(args) {
+    let N = parseInt(args[0]);
+        let G = [];
+    let i, j;
+
+    for (i = 0; i < N; i += 1) {
+        for (j = 1; j <= N; j += 1) {
+            G.push(j + i);
+        }
+        G.push('\n');
+    }
+    G = G.join(" ");
+    console.log(G);
+}

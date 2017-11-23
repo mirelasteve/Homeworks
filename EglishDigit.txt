@@ -1,0 +1,6 @@
+function digit(n) {
+    n = parseInt(n);
+    checkn = n % 10;
+    numbers = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+    console.log(numbers[checkn]);
+}

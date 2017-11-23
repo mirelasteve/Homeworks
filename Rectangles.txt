@@ -1,0 +1,16 @@
+function solve (args){
+
+  var width = Number(args[0]);
+  
+  var height = Number(args[1]);
+  
+  var perimeter = parseFloat((width+height));
+  perimeter = (2*perimeter).toFixed(2);
+  
+  var area = (width*height).toFixed(2);
+   
+   
+  
+  console.log(area+" "+perimeter);
+
+}

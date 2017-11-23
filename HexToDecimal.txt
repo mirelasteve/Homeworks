@@ -1,0 +1,7 @@
+function solve(args) {
+    let N = args[0];
+    let dec = parseInt(N, 16);
+    console.log(dec);
+
+
+}

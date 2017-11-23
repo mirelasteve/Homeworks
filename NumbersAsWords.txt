@@ -1,0 +1,69 @@
+function solve(args) {
+
+    let str = args[0];
+    strLen = str.length;
+    let num = parseInt(str);
+
+    let ones = ['', 'One', 'Two', 'Three', 'Four', 'Five', 'Six', 'Seven', 'Eight', 'Nine', 'Ten', 'Eleven', 'Twelve', 'Thirteen', 'Fourteen', 'Fifteen', 'Sixteen', 'Seventeen', 'Eighteen', 'Nineteen'];
+    let tens = ['', '', 'Twenty', 'Thirty', 'Forty', 'Fifty', 'Sixty', 'Seventy', 'Eighty', 'Ninety'];
+    let hundred = 'hundred';
+    let output = ' ';
+    let zero = 'Zero';
+
+    if (strLen == 1) {
+        let i = num;
+        output = ones[i];
+        if (num == 0) {
+            output = zero;
+        }
+    }
+
+    if (strLen == 2) {
+        let res = str.split('');
+        let j = parseInt(res[0]);
+        let k = parseInt(res[1]);
+
+        if (j > 1 && k == 0) {
+            output = tens[j];
+        }
+        if (j > 1 && k > 0) {
+            output = tens[j];
+            output += ' ' + (ones[k]).toLowerCase();
+        }
+
+        if (j == 1) {
+            k += 10;
+            output = ones[k];
+        }
+    }
+    if (strLen == 3) {
+        let result = str.split('');
+        let l = parseInt(result[0]);
+        let m = parseInt(result[1]);
+        let n = parseInt(result[2]);
+
+        if (m == 0 && n == 0) {
+            output = ones[l] + ' ' + hundred;
+        }
+        if (m == 0 && n > 0) {
+            output = (ones[n]).toLowerCase();
+            output = ones[l] + ' ' + hundred + ' and ' + output.toLowerCase();
+        }
+
+        if (m == 1) {
+            n += 10;
+            output = ones[n];
+            output = ones[l] + ' ' + hundred + ' and ' + output.toLowerCase();
+        }
+        if (m > 2 && n == 0) {
+            output = (tens[m]).toLowerCase();
+            output = ones[l] + ' ' + hundred + ' and ' + output.toLowerCase();
+        }
+        if (m > 1 && n > 1) {
+            output = tens[m] + ' ' + ones[n];
+            output = ones[l] + ' ' + hundred + ' and ' + output.toLowerCase();
+        }
+    }
+
+    console.log(output);
+}

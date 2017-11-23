@@ -1,0 +1,17 @@
+function check(args) {
+    let m = args[0];
+    let str = args[1];
+    let mT = '';
+    for (let i = 0; i < m.length; i++) {
+        if ((/[^0-9a-zA-Z\s]/).test(m)) {
+            mT += '\\' + m[i];
+        } else {
+            mT += m[i];
+        }
+    }
+
+    let reg = new RegExp(mT, 'gi');
+
+    let s = str.match(reg);
+    console.log(s.length);
+}

@@ -1,0 +1,9 @@
+function solve(args){
+
+   let a = parseFloat(args[0]);
+   let b = parseFloat(args[1]);
+   
+  if (a<=b) {console.log(a+" "+b);}
+    else {console.log(b+" "+a);
+}
+}

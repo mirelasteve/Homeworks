@@ -1,0 +1,12 @@
+function remove(args) {
+    let newArr = [],
+        i;
+    for (i in args) {
+        if (args[0] !== args[i]) {
+            newArr.push(args[i]);
+        }
+    }
+    newArr = newArr.join(' \n');
+    newArr.split('\n');
+    console.log(newArr);
+}

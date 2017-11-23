@@ -1,0 +1,22 @@
+function correctBrackets(args) {
+    let parse = '()';
+    let r = args.join(' ');
+    r = r.replace(/[^()]/g, '');
+    rr = r.length - 1;
+    if (r.length % 2 !== 0 | r[0] !== parse[0] | r[rr] !== parse[1]) {
+        console.log('Incorrect');
+    } else {
+        for (let i = 0; i <= r.length - 1; i += 1) {
+            if (r[i] === parse[0] && r[i + 1] === parse[1]) {
+                r = r.replace(r[i], '').replace(r[i + 1], '');
+                i = -1;
+            }
+        }
+
+        if (r.length === 0) {
+            console.log('Correct');
+        } else {
+            console.log('Incorrect');
+        }
+    }
+}

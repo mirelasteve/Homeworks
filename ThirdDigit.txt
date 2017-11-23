@@ -1,0 +1,17 @@
+function solve (args) {
+  
+    let s= parseFloat(args[0]);
+
+      s = s%1000;
+     
+    s = s/100;
+    s=parseInt(s);
+  if (s==7) {
+  
+  console.log('true');      
+  }
+  else {
+  console.log("false "+s);
+  }
+
+}

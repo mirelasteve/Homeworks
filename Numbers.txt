@@ -1,0 +1,11 @@
+function solve(args){
+let n = parseInt(args[0]);
+  let i;
+  let ret=" ";
+  for (i = 1; i <= n; i+=1){
+    ret +=i+" ";
+  
+  }
+  console.log(ret);
+
+}

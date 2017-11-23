@@ -1,0 +1,18 @@
+function solve (args){
+
+   let x = parseFloat(args[0]);
+   let y = parseFloat(args[1]);  
+   let d = Math.sqrt(Math.pow(x,2) + Math.pow(y,2) );
+   let r =4;
+   let d2 = (d*d);
+       d =d.toFixed(2);
+   
+  if ( d2 <= r) {
+              console.log("yes "+d);
+  }
+  else {
+  
+      console.log("no "+d);
+  }
+
+}

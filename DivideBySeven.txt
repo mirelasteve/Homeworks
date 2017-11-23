@@ -1,0 +1,9 @@
+function solve(args) {
+  
+  args=parseInt(args);
+  if(args % 7===0 && args%5===0){
+    return ('true '+ args);}
+  else {return ('false '+args);}
+
+
+}

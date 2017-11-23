@@ -1,0 +1,35 @@
+function check(args) {
+    for (let i in args) {
+        args[i] = parseFloat(args[i]);
+    }
+
+    let distance = {
+        fx1: args[0],
+        fy1: args[1],
+        fx2: args[2],
+        fy2: args[3],
+        secondx1: args[4],
+        secondy1: args[5],
+        secondx2: args[6],
+        secondy2: args[7],
+        thirdx1: args[8],
+        thirdy1: args[9],
+        thirdx2: args[10],
+        thirdy2: args[11],
+        fundist: function() {
+            let answer = '';
+
+            let d1 = Math.sqrt(((this.fx2 - this.fx1) * (this.fx2 - this.fx1) + (this.fy2 - this.fy1) * (this.fy2 - this.fy1)));
+            let d2 = Math.sqrt(((this.secondx2 - this.secondx1) * (this.secondx2 - this.secondx1) + (this.secondy2 - this.secondy1) * (this.secondy2 - this.secondy1)));
+            let d3 = Math.sqrt(((this.thirdx2 - this.thirdx1) * (this.thirdx2 - this.thirdx1) + (this.thirdy2 - this.thirdy1) * (this.thirdy2 - this.thirdy1)));
+            if (((d1 + d2) > d3) && ((d1 + d3) > d2) && ((d2 + d3) > d1)) {
+                answer = 'Triangle can be built';
+            } else {
+                answer = "Triangle can not be built";
+            }
+            return d1.toFixed(2) + '\n' + d2.toFixed(2) + '\n' + d3.toFixed(2) + '\n' + answer;
+        }
+
+    };
+    console.log(distance.fundist());
+}

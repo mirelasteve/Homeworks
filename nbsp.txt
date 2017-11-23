@@ -1,0 +1,4 @@
+function check(text){
+text = text.join('').replace(/\s/g,'&nbsp;');
+ console.log(text);
+}

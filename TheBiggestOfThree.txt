@@ -1,0 +1,17 @@
+function solve(args){
+
+  let a = parseFloat(args[0]);
+  let b = parseFloat(args[1]);
+  let c = parseFloat(args[2]);
+  let max = 0;
+  if ( a >= b && a >= c) {
+    max = a;
+  }
+  if ( b>=a && b>=c) {
+    max = b;
+  }
+  if ( c>=a && c>=b) {
+    max = c;
+  }
+ console.log (max);
+}
