@@ -1,0 +1,23 @@
+function binarySearch(args) {
+    let len = args.length;
+
+    len = parseInt(len);
+    let arr = [];
+    let i;
+    let len1 = len - 1;
+    let F = args[len1];
+
+
+
+    for (i = 1; i < len1; i++) {
+        arr.push(parseInt(args[i]));
+    }
+    for (i = 1; i < len1; i++) {
+        if (arr[i] == F) {
+            console.log(i);
+        }
+
+
+    }
+
+}
