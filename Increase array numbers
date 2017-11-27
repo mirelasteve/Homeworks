@@ -1,0 +1,12 @@
+function solve(args) {
+    let N = parseInt(args[0]);
+    let answer = [];
+    for (let i = 0; i <N; i++) {
+        answer.push(i * 5);
+
+
+    }
+
+    answer = answer.join("\n");
+    console.log(answer);
+}
