@@ -1,0 +1,23 @@
+function maxSequence(arr) {
+    let N = arr[0];
+
+    let elements = arr.slice(1);
+    let counter = 0;
+    let maxCounter = 0;
+    for (let i = 0; i < N; i++) {
+        if (elements[i] < elements[i + 1]) {
+            counter += 1;
+        }
+        if (elements[i] >= elements[i + 1]) {
+            if (maxCounter < counter) {
+                maxCounter = counter;
+                counter = 0;
+            }
+            counter = 0;
+        }
+       
+          }
+    maxCounter += 1;
+    console.log(maxCounter);
+
+}
