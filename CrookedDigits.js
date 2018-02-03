@@ -18,4 +18,8 @@ const crooked = (n) => {
         crooked(n);
     }
 }
-crooked(n);
+if (n != 0) {
+    crooked(n);
+} else {
+    print('0');
+}
